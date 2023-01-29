@@ -1,6 +1,6 @@
 document.getElementById('submit').addEventListener('click', submitFunc)
 
-function submitFunc() {
+function submitFunc(event) {
     const year = 2023;
     let first = document.getElementById('year')
     let second = document.getElementById('country')
@@ -66,4 +66,6 @@ function submitFunc() {
     }
 
     // secondary
+
+    event.preventDefault()
 }
