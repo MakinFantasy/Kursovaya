@@ -6,14 +6,18 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
 </head>
-<body>
+<body class="body">
     <h1>Система определения антиквариата</h1>
-    <form action="http://localhost:8000">
+    <form class="form">
+    <div class="div_main">
+       <div class="div_1">
         <label for="year">Год производства</label>
-        <input type="text" id="year" name="year" required>
+        <input class="button1" type="text" id="year" name="year" required>
+       </div>
 
+       <div class="div_1">
         <label for="country">Страна производства</label>
-        <select required="required" id="country" name="country">
+        <select class="button1" required="required" id="country" name="country">
             <option value="">...</option>
             <option value="Rus">Россия</option>
             <option value="UK">Великобритания</option>
@@ -21,22 +25,28 @@
             <option value="Canada">Канада</option>
             <option value="else">Другая</option>
         </select>
+        </div>
 
+        <div class="div_2">
         <label for="materials">Присутствуют ли дорогие материалы?</label>
-        <select required="required" id="materials" name="materials">
+        <select class="button1" required="required" id="materials" name="materials">
             <option value="?">Не знаю</option>
             <option value="yes">Да</option>
             <option value="no">Нет</option>
         </select>
+        </div>
 
+        <div class="div_1">
         <label for="unique">Уникальность изготовления</label>
-        <select required="required" id="unique" name="unique">
+        <select class="button1" required="required" id="unique" name="unique">
             <option value="no">Нет</option>
             <option value="yes">Уникальные технологии</option>
             <option value="mb">Редкие технологии</option>
         </select>
+        </div>   
     </form>
-    <button id="submit">Submit</button>
+    <button class="button" id="submit">Submit</button>
+    </div>
     <div>
         <p id="main"></p>
         <p id="price"></p>
