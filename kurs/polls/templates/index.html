@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+</head>
+<body>
+    <h1>Система определения антиквариата</h1>
+    <form action="http://localhost:8000">
+        <label for="year">Год производства</label>
+        <input type="text" id="year" name="year" required>
+
+        <label for="country">Страна производства</label>
+        <select required="required" id="country" name="country">
+            <option value="">...</option>
+            <option value="Rus">Россия</option>
+            <option value="UK">Великобритания</option>
+            <option value="USA">США</option>
+            <option value="Canada">Канада</option>
+            <option value="else">Другая</option>
+        </select>
+
+        <label for="materials">Присутствуют ли дорогие материалы?</label>
+        <select required="required" id="materials" name="materials">
+            <option value="?">Не знаю</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+
+        <label for="unique">Уникальность изготовления</label>
+        <select required="required" id="unique" name="unique">
+            <option value="no">Нет</option>
+            <option value="yes">Уникальные технологии</option>
+            <option value="mb">Редкие технологии</option>
+        </select>
+    </form>
+    <button id="submit">Submit</button>
+    <div>
+        <p id="main"></p>
+        <p id="price"></p>
+    </div>
+    <script src="{% static 'polls/js/index.js'%}"></script>
+</body>
+</html>
