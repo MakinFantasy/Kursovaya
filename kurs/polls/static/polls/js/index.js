@@ -66,6 +66,5 @@ function submitFunc(event) {
     }
 
     // secondary
-
     event.preventDefault()
 }
