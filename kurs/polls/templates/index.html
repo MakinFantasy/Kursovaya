@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
 </head>
 <body class="body">
@@ -47,9 +48,9 @@
     </form>
     <button class="button" id="submit">Submit</button>
     </div>
-    <div>
-        <p id="main"></p>
-        <p id="price"></p>
+    <div class="results">
+        <p class="res__up" id="main"></p>
+        <p class="res__down" id="price"></p>
     </div>
     <script src="{% static 'polls/js/index.js'%}"></script>
 </body>
